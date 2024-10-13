@@ -5,7 +5,7 @@ template Add() {
     signal input b;
 
     // TODO: change the type of signal
-    signal input sum;
+    signal output sum;
 
     sum <== a + b;
 }

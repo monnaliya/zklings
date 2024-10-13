@@ -5,10 +5,15 @@ template Poly() {
     signal input y;
     signal input z;
 
+    signal intermediate1;
+    signal intermediate2;
+    signal intermediate3;
     signal output out;
 
-    // TODO: Breakdown this non quadratic expression into multiple quadratic expressions
-    out <== x * y * z * 4;
+    intermediate1 <== x * y;
+    intermediate2 <== intermediate1 * z;
+    intermediate3 <== intermediate2 + 4;
+    out <== intermediate3;
 }
 
 component main = Poly();

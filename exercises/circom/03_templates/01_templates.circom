@@ -13,6 +13,11 @@ template Main() {
     signal output out;
 
     // TODO: Instantiate the template A
+
+    component instA = A(5);
+
+    instA.in <== a;
+    out <== instA.out;
 }
 
 component main = Main();
